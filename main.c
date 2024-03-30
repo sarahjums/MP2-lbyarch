@@ -26,11 +26,17 @@ void run_dot_product(n) {
 		B[i] = generate_random_double();
 	}
 	
+	clock_t start_c = clock();
 	sdot = dot_prod_c(A, B, n);
-	printf("C - Dot Product: %lf\n", sdot);
+	clock_t end_c = clock();
+	double time_taken_c = ((double)(end_c - start_c)) / CLOCKS_PER_SEC;
+	printf("C - Dot Product: %lf (Time: %lf seconds)\n", sdot, time_taken_c);
 
+	clock_t start_asm = clock();
 	sdot = dot_prod_asm(A, B, n);
-	printf("ASM - Dot Product: %lf\n", sdot);
+	clock_t end_asm = clock();
+	double time_taken_asm = ((double)(end_asm - start_asm)) / CLOCKS_PER_SEC;
+	printf("ASM - Dot Product: %lf (Time: %lf seconds)\n", sdot, time_taken_asm);
 
 	free(A);
 	free(B);
