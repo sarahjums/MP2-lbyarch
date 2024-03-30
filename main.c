@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+<<<<<<< HEAD
 #include <time.h>
+=======
+#include "cfunc.c"
+>>>>>>> 5b2fd9601b0c2b7693014a5c9e12d02c70f67fb2
 
 extern double dot_prod_asm(double A[], double B[], long long int n);
 
@@ -15,6 +19,7 @@ int main() {
 	long long int n = 3;
 	double sdot = 0; //for this, sdot should be equal to 10 (2.5*1+3*1+4.5*1=10)
 
+<<<<<<< HEAD
 	srand(time(NULL));
 
 
@@ -72,9 +77,13 @@ int main() {
 	free(B30);
 
 
+=======
+	sdot = dot_prod_c(A, B, n);
+	printf("C - Dot Product: %lf\n", sdot);
+>>>>>>> 5b2fd9601b0c2b7693014a5c9e12d02c70f67fb2
 
 	sdot = dot_prod_asm(A, B, n);
-	printf("Dot Product: %lf\n", sdot);
+	printf("ASM - Dot Product: %lf\n", sdot);
 	return 0;
 }
 
