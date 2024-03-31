@@ -67,8 +67,7 @@ int main() {
 	// 16777216 = 2^24
 	run_dot_product(16777216);
 	// 1073741824 = 2^30
-	// 134217728 = 2^27
-	run_dot_product(134217728);
+	run_dot_product(1073741824);
 
 	
 	return 0;
