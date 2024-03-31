@@ -31,3 +31,4 @@ The x86-64 implementation had a lower average execution time than the C implemen
 ![image](https://github.com/sarahjums/MP2-lbyarch/assets/106684744/0d7aaa29-2421-4242-bb9a-cb74612fc604)
 
 ✔ produces the same results
+NOTE: displayed times are an average from 30 consecutive runs
